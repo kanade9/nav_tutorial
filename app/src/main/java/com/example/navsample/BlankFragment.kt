@@ -7,12 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-//
 //import com.example.navigationsample.R
 import kotlinx.android.synthetic.main.fragment_blank.view.*
+import kotlinx.android.synthetic.main.fragment_blank2.view.*
 
 class BlankFragment : Fragment() {
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,8 +22,9 @@ class BlankFragment : Fragment() {
         view.button?.setOnClickListener {
 //            Navigation.findNavController(it).navigate(R.id.action_blankFragment_to_blankFragment2)
             findNavController().navigate(BlankFragmentDirections.actionBlankFragmentToBlankFragment2(
-                code = "hello!! from BlankFragment1"
-//                state = "state"
+                line = view.editText.text.toString(),
+                code = "hello!! from BlankFragment1",
+                type = "normal"
             ))
         }
         return view
