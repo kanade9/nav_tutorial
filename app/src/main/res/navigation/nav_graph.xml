@@ -14,5 +14,19 @@
     <fragment
         android:id="@+id/blankFragment2"
         android:name="com.example.navsample.BlankFragment2"
-        android:label="BlankFragment2" />
+        android:label="BlankFragment2">
+    <argument
+        android:name="code"
+        app:argType="string"
+        android:defaultValue="hogehoge" />
+    <argument
+        android:name="type"
+        app:argType="string"
+        android:defaultValue="fugafuga" />
+    <argument
+        android:name="line"
+        app:argType="string"
+        android:defaultValue="this is a pen" />
+    </fragment>
+
 </navigation>
