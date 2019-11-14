@@ -11,6 +11,11 @@ viewに埋め込む値はそれぞれのフラグメントのxmlを参考にそ�
 まずnavigation(今回はnav_graph.xml)でfragmentの中にargumentを定義する。これやらないといくら送る方、受け取る方で頑張ってもできない。  
 argumentはもちろん渡したいデータの数だけ用意すること。  
 argumentで追加した後、必ずkotlinのフラグメントのコードを書く前にReBuild Projectすること。これしないとクラスの自動生成などでバグが起こるらしい。
+
+#### popについて
+画面遷移した時、戻るボタンを押した時に前の画面へ戻れないように設定したい場合、xmlのactionのところに以下を追加する  
+app:popUpTo="@+id/a_fragment"  
+app:popUpToInclusive="true"  
  
 ### 参考サイト
 値渡し  
