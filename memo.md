@@ -29,3 +29,6 @@ https://blog.tsuiteikunogayattodaze.net/archives/121
 
 このサイトでやったら結構環境が違うところが多くてハマった
 https://qiita.com/tktktks10/items/7df56b4795d907a4cd31  
+
+popとか子→親の値渡しとか  
+https://teratail.com/questions/211164
