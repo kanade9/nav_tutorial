@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="page2" />
+        android:text="最後のページ" />
 
     <TextView
         android:id="@+id/textView"
@@ -35,5 +35,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView3" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="back" />
 
 </LinearLayout>

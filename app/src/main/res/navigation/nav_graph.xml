@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
-    app:startDestination="@id/blankFragment">
+    app:startDestination="@id/defaultFragment">
+
+    <fragment
+        android:id="@+id/defaultFragment"
+        android:name="com.example.navsample.DefaultFragment"
+        android:label="DefaultFragment" >
+        <action
+            android:id="@+id/action_defaultFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/blankFragment"
@@ -10,6 +19,10 @@
         <action
             android:id="@+id/action_blankFragment_to_blankFragment2"
             app:destination="@id/blankFragment2" />
+        <argument
+            android:name="back_argument"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/blankFragment2"
@@ -27,6 +40,12 @@
         android:name="line"
         app:argType="string"
         android:defaultValue="this is a pen" />
+        <action
+            android:id="@+id/action_blankFragment2_to_blankFragment"
+            app:destination="@+id/blankFragment"
+            app:popUpTo="@+id/blankFragment"
+            app:popUpToInclusive="true"
+            />
     </fragment>
 
 </navigation>

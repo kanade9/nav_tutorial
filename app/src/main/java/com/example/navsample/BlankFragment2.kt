@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import kotlinx.android.synthetic.main.fragment_blank.view.*
 import kotlinx.android.synthetic.main.fragment_blank2.view.*
 
 class BlankFragment2 : Fragment() {
@@ -24,6 +26,14 @@ class BlankFragment2 : Fragment() {
         view.textView.text=code
         view.textView2.text=type
         view.textView3.text=line
+
+        view.button2?.setOnClickListener {
+           findNavController().navigate(
+                BlankFragment2Directions.actionBlankFragment2ToBlankFragment(
+                    backArgument  = view.editText2.text.toString()
+                )
+            )
+        }
         return view
     }
 
